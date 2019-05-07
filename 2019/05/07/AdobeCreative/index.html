@@ -10,7 +10,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Crazy,"> 
-    <meta name="description" content="AdobeCreative  安装后无法显示App选项解决方案作为一个IT 男。虽然主要是撸代码 但是偶尔还是有一些修图的需求的，例如扣个身份证证件照 虽然直接去拍个照省事，但是本着自己动手丰衣主食,"> 
+    <meta name="description" content="AdobeCreative  安装后无法显示App选项解决方案解决方案:
+
+进入路径：/Applications/Utilities/Adobe Installers如图所示:
+点击Uninstal,"> 
     <meta name="author" content="CT"> 
     <link rel="alternative" href="atom.xml" title="Crazy" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -60,25 +63,28 @@
 
         </div>
         <div class="content markdown">
-            <h1 id="AdobeCreative-安装后无法显示App选项解决方案"><a href="#AdobeCreative-安装后无法显示App选项解决方案" class="headerlink" title="AdobeCreative  安装后无法显示App选项解决方案"></a>AdobeCreative  安装后无法显示App选项解决方案</h1><p>作为一个IT 男。虽然主要是撸代码 但是偶尔还是有一些修图的需求的，例如扣个身份证证件照 虽然直接去拍个照省事，但是本着自己动手丰衣主食的精神还是来折腾Adobe 的PS了。</p>
+            <h1 id="AdobeCreative-安装后无法显示App选项解决方案"><a href="#AdobeCreative-安装后无法显示App选项解决方案" class="headerlink" title="AdobeCreative  安装后无法显示App选项解决方案"></a>AdobeCreative  安装后无法显示App选项解决方案</h1><p><strong>解决方案:</strong></p>
+<ul>
+<li>进入路径：/Applications/Utilities/Adobe Installers<br>如图所示:<br><img src="/img/uninstall.png" alt></li>
+<li>点击Uninstall Adobe Creative Cloud  卸载Adobe Creative</li>
+<li>使用AdobeCreativeCloudCleanerTool 对本地环境进行清理, 最后Fix Host File 可能还会显示可以忽略</li>
+</ul>
+<p><img src="/img/AdobeCreativeCloudCleanerTool.png" alt="AdobeCreativeCloudCleanerTool"></p>
+<ul>
+<li>最后重新安装Adobe Creative Cloud 再次打开后就能看到app 选项如果没有成功就多次尝试切管机重启</li>
+</ul>
+<p><strong>背景:</strong></p>
+<p>作为一个IT 男。虽然主要是撸代码 但是偶尔还是有一些修图的需求的，例如扣个身份证证件照 虽然直接去拍个照省事，但是本着自己动手丰衣主食的精神还是来折腾Adobe 的PS了。</p>
 <p>但是天不遂人愿，安装的过程中就出现问题了，就这么中招了。然后就是各种搜索，一顿操作，在网上找到解决方案，然后就是一堆操作猛如虎，结果就是一脸懵比。</p>
-<p>经过不懈努力，最终还是操作成功了。所以就是折腾就对了，下图就是成功后的结果。<br><img src="/image/adobe.png" alt="成功"></p>
+<p>经过不懈努力，最终还是操作成功了。所以就是折腾就对了，下图就是成功后的结果。<br><img src="/img/adobe.png" alt="成功"></p>
 <p>安装出错的是最左边是没有app 这个选项的 按照网上的解决方案<br><a href="http://help.waitsun.com/knowledge/adobe-creative-cloud-no-apps/" target="_blank" rel="noopener">解决方案链接</a></p>
 <p>原文</p>
 <blockquote>
+<p>很多人都知道Adobe全家桶可以通过安装Creative Cloud来在线安装，但是有很多朋友在安装Adobe Creative Cloud后发现软件里面没有Apps这一项，英文官网有很多解决方案，收集整理下，简单理解就是卸载后重新安装，一句话：<br>进/library删Application support &gt; Adobe&gt;OOBE和AAMupdater，用Adobe CC cleaner卸载Adobe Application Manager for Mac OSX 10.6，再重装Adobe Creative Cloud。<br>其中涉及到的软件Adobe CC cleaner在这里下载：<a href="http://download.macromedia.com/SupportTools/Cleaner/mac/AdobeCreativeCloudCleanerTool.dmg" target="_blank" rel="noopener">AdobeCreativeCloudCleanerTool.dmg</a></p>
 </blockquote>
-<p>很多人都知道Adobe全家桶可以通过安装Creative Cloud来在线安装，但是有很多朋友在安装Adobe Creative Cloud后发现软件里面没有Apps这一项，英文官网有很多解决方案，收集整理下，简单理解就是卸载后重新安装，一句话：</p>
-<blockquote>
-</blockquote>
-<p>进/library删Application support &gt; Adobe&gt;OOBE和AAMupdater，用Adobe CC cleaner卸载Adobe Application Manager for Mac OSX 10.6，再重装Adobe Creative Cloud。</p>
-<blockquote>
-</blockquote>
-<p>其中涉及到的软件Adobe CC cleaner在这里下载：<a href="http://download.macromedia.com/SupportTools/Cleaner/mac/AdobeCreativeCloudCleanerTool.dmg" target="_blank" rel="noopener">AdobeCreativeCloudCleanerTool.dmg</a></p>
 <blockquote>
 <p>英文原版<br>– Sign out of Creative Cloud desktop and then exit Creative Cloud desktop.<br>– Go to Macintosh HD/Library/Application Support/Adobe<br>– Find and delete the folders: AAM Updater, OOBE folder and Adobeapplication Manager folder<br>– Run CC cleaner tool found here &gt; <a href="https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html" target="_blank" rel="noopener">https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html</a><br>– Select Creative Cloud Desktop and click clean up selected only<br>– Re-install Creative Cloud Desktop &gt; <a href="https://creative.adobe.com/products/creative-cloud" target="_blank" rel="noopener">https://creative.adobe.com/products/creative-cloud</a><br>– Log in and apps tab should be displaying with 2015 updates available<br>You may need to re-install the Adobe application manager found here &gt; Adobe – Adobe Application Manager : For Macintosh : Adobe Application Manager<br>This has worked for myself and others with the same problem<br>这就是病态的Adobe Creative Cloud</p>
 </blockquote>
-<p>方法是有了但是可能是操作循序不是很多所以操作了好几次 才成功</p>
-<p>下面是具体的流程操纵：</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
