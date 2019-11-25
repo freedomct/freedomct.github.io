@@ -66,7 +66,20 @@
 <p><a href="https://www.jianshu.com/p/a10402b48a1c" target="_blank" rel="noopener">参考链接1:</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接一是提供大家升级python的 ，但是升级后Xcode不能用了。</span><br><span class="line">当时就想为什么苹果不提供python的更新版本呢，或许是2.7是最为稳定的吧，毕竟Xcode每次更新都是一顿骂最后才稳定下来。一切以稳定为主😂😂</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.hehaibao.com/mac-python27-to-37/" target="_blank" rel="noopener">参考链接2:</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这个链接是提供另一个思路，就是把系统链接路径修改为我们最新安装的路径</span><br><span class="line">原系统路径:/System/Library/Frameworks/Python.framework/Versions/3.8</span><br><span class="line">python 官网安装路径:/Library/Frameworks/Python.framework/Versions/3.8</span><br><span class="line">2个都差别就是前面是否有system path</span><br></pre></td></tr></table></figure></p>
-<p>下面是结合上面的2篇文章个人做的总结</p>
+<p>下面是结合上面的2篇文章个人做的总结:</p>
+<p>#一、参考链接一中有步骤要删除2.7版本的python 其实我们可以跳过这个步骤直接把新安装的版本拷贝进去 </p>
+<h2 id="可以省略的步骤"><a href="#可以省略的步骤" class="headerlink" title="可以省略的步骤"></a>可以省略的步骤</h2><blockquote>
+<p>4.删除旧版本的Python##<br>sudo rm -R /System/Library/Frameworks/Python.framework/Versions/2.7<br>直接</p>
+</blockquote>
+<p>要不删除后还是要继续添加回来这个只能等苹果对Xcode 内部做修改了</p>
+<h1 id="二、更新-bash-profile文件"><a href="#二、更新-bash-profile文件" class="headerlink" title="二、更新.bash_profile文件"></a>二、更新.bash_profile文件</h1><blockquote>
+<p>这个如果是安装了zsh 最新的Mac系统已经自动继承了 可能并不是在.bash_profile 中 而是在.zprofile 如果不放心的话 可以在2个地方 把路径都添加上 其实在zprofile  已经有path 链接到.bash_profile  上了 </p>
+</blockquote>
+<p>#三、卸载安装在/Library/Frameworks/Python.framework/Versions/3.8中的版本</p>
+<blockquote>
+<p>查询 ls /Library/Frameworks/Python.framework/Versions/3.8</p>
+<p>卸载 sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.8<br>不过好像卸载后 pip -V (是大写) 链接到还是旧版2.7的 这个到时候再试下 如何去修改 pip3 -V  是链接到最新版本</p>
+</blockquote>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
