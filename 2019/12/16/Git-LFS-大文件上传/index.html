@@ -10,8 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Crazy,"> 
-    <meta name="description" content="
- 背景:某天使用一个第三方，按照正常的流程  git  add .git commit -m “xxx”git pullgit push开心的等待上传成功吃饭 结果居然报错了(心里一万只草泥马奔过,"> 
+    <meta name="description" content="GIT  通过LSF上传大文件步骤:
+
+首先确保安装了 Git Large File Storge
+安装成功后,cd 到项目目录中 执行 git lfs install
+然后添加钩子(hooks)g,"> 
     <meta name="author" content="CT"> 
     <link rel="alternative" href="atom.xml" title="Crazy" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -61,11 +64,20 @@
 
         </div>
         <div class="content markdown">
-            <blockquote>
-<p> 背景:<br>某天使用一个第三方，按照正常的流程  git  add .<br>git commit -m “xxx”<br>git pull<br>git push<br>开心的等待上传成功吃饭 结果居然报错了(心里一万只草泥马奔过…)<br>如图<br><img src="/images/uploadFail.png" alt="上传失败"></p>
+            <p>GIT  通过LSF上传大文件步骤:</p>
+<ul>
+<li>首先确保安装了 <a href="https://git-lfs.github.com/" target="_blank" rel="noopener">Git Large File Storge</a></li>
+<li>安装成功后,cd 到项目目录中 执行 git lfs install</li>
+<li>然后添加钩子(hooks)git track “xxx.xxx”  (需要进行上传的大文件,这里一定要根据提示去填写名称要不还会报错)</li>
+<li>根据git-lfs 官网操作流程发现还是报错,所以我们需要回滚代码，先添加gitattributes文件 然后再添加需要上传的大文件</li>
+<li>最后执行 git add  commit  push 等常规操作流程就OK啦  </li>
+<li>校验是否是大文件上传请见下图(uploading LFS objects)才表示是在再传大文件</li>
+</ul>
+<blockquote>
+<p> 背景:<br>某天使用一个第三方，按照正常的流程  git  add .<br>git commit -m “xxx”<br>git pull<br>git push<br>开心的等待上传成功吃饭 结果居然报错了(心里一万只草泥马奔过…)<br>如图<br><img src="/images/uploadFail.png" alt="上传失败"><br><img src="/images/gitconfig.png" alt="git个人中心配置"><br><img src="/images/lfssuccess.png" alt="上传成功文件"><br><img src="/images/addhooks.png" alt="添加钩子成功"><br><img src="/images/startupload.png" alt="开始上传"><br><img src="/images/lfsuploadsuccess.png" alt="上传成功示意图"></p>
 </blockquote>
 <p> 根据提示我们知道github 不允许通过普通方式上传大文件 需要我们进行另外的一个配置 通过LFS (大文件存储功能) 来进行上传</p>
-<p><a href="https://git-lfs.github.com/" target="_blank" rel="noopener">Git Large File Storge</a><br>共有三种安装方式:<br>1、直接下载安装<br>2、通过包管理器安装 brew install git-lfs<br>3、通过MacPorts安装: prot install git-lfs</p>
+<p>共有三种安装方式:<br>1、直接下载安装<br>2、通过包管理器安装 brew install git-lfs<br>3、通过MacPorts安装: prot install git-lfs</p>
 <p><img src="/images/uploadLargeFiles.png" alt="正确都上传示意图"><br><a href="https://git-lfs.github.com/" target="_blank" rel="noopener">GitLarge</a><br><a href="https://help.github.com/en/github/managing-large-files/conditions-for-large-files" target="_blank" rel="noopener">大文件提示</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
