@@ -13,8 +13,8 @@
     <meta name="description" content="Git  通过LFS上传大文件步骤:
 
 首先确保安装了 Git Large File Storge
-安装成功后,cd 到项目目录中 执行 git lfs install
-然后添加钩子(hooks):,"> 
+ 安装成功后,cd 到项目目录中 执行 git lfs install
+然后添加钩子(hooks),"> 
     <meta name="author" content="CT"> 
     <link rel="alternative" href="atom.xml" title="Crazy" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -67,7 +67,7 @@
             <p>Git  通过LFS上传大文件步骤:</p>
 <ul>
 <li>首先确保安装了 <a href="https://git-lfs.github.com/" target="_blank" rel="noopener">Git Large File Storge</a></li>
-<li>安装成功后,cd 到项目目录中 执行 git lfs install</li>
+<li style="list-style: none"><input type="checkbox" checked> 安装成功后,cd 到项目目录中 执行 git lfs install</li>
 <li>然后添加钩子(hooks):git lfs track “xxx.xxx”  (需要进行上传的大文件,这里一定要根据提示去填写名称要不还会报错)</li>
 <li>根据git-lfs 官网操作流程发现还是报错,所以我们需要回滚代码，先添加gitattributes文件 然后再添加需要上传的大文件</li>
 <li>最后执行 git add  commit  push 等常规操作流程就OK啦  </li>
